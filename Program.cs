@@ -46,11 +46,27 @@ namespace HomeWork13
             // Console.WriteLine("------------------------------");
             // ArrayHelper<string> ar = new ArrayHelper<string>();
             // ar.Shift(ref numbers); 
-            // //ArrayHelper.Shift(ref numbers);
+            
             // foreach (var y in numbers)
             // {
             //     Console.WriteLine(y);
             // }
+
+
+            //Medthood UnShift
+            // string[] numbers = { "1", "2", "3", "4", "5",  };
+            // foreach (var y in numbers) 
+            // {
+            //     Console.WriteLine(y);
+            // }
+            // Console.WriteLine("------------------------------");
+            //  ArrayHelper<string> ar = new ArrayHelper<string>();
+            //  ar.UnShift(ref numbers, "0");
+            // foreach (var y in numbers)
+            // {
+            //     Console.WriteLine(y);
+            // }
+
 
         }
     }
@@ -97,6 +113,18 @@ namespace HomeWork13
             stringArr = arr;
             return s;
         }
+
+         public  void UnShift(ref T[] stringArr, T mac)
+        {
+            T[] arr = new T[stringArr.Length + 1];
+            arr[0] = mac;
+            for (int i = 0; i < arr.Length-1; i++)
+            {
+                arr[i+1] = stringArr[i];
+            }
+            stringArr = arr;
+        }
+
 
     }
 
